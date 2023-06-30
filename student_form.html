@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form student</title>
+    <link rel="stylesheet" href="student_form.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script src="https://github.com/eligrey/FileSaver.js.git"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--  Headline   -->
+    <div class="headline text-center text-bg-info" >
+        <h1>Students</h1>
+    </div>
+
+
+   
+<form id="form_field" action="">
+  <!-- form field start  -->
+
+
+    <div class="container "> <!-- main-container -->
+
+        <div class="row">
+
+            <div class="col">
+              <div class="mb-1">
+                  <label for="name" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="fname" name="fname" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-1">
+                  <label for="name" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lname" name="lname" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-1">
+                  <label for="email" class="form-label"> email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+            </div>
+        
+
+        <div class="row mt-2">
+            <div class="col-4">
+              <div class="mb-1">
+                  <label for="contact" class="form-label">Contact no</label>
+                  <input type="text" class="form-control" id="contact" name="contact" max="10" min="10" required>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="mb-1">
+                  <label for="address" class="form-label">address</label>
+                  <input type="text" class="form-control" id="address" name="address" maxlength="30" required>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="row mt-2">
+          <div class="col">
+            <div class="mb-1">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-1">
+                <label for="state" class="form-label">state</label>
+                <input type="text" class="form-control" id="state" name="state" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-1">
+                <label for="country" class="form-label"> country</label>
+                <input type="text" class="form-control" id="country" name="country" required>
+            </div>
+          </div>
+      </div>
+
+
+      <div class="row mt-2">
+          <div class="col-4">
+            <div class="mb-1">
+                <label for="date" class="form-label">Birthday</label>
+                <input type="date" class="form-control" id="bdate" name="bdate" required>
+            </div>
+          </div>
+          <div class="col-3">
+              <div class="mb-1">
+                  <label for="date" class="form-label">Gender</label><br>
+                  <input type="radio" name="gender" value="male" required> Male  &nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="gender" value="female" required> Female
+              </div>
+          </div>
+          <div class="col-5">
+            <div class="mb-1">
+                <label for="Hobbies" class="form-label"> Hobbies</label><br>
+                <input type="checkbox" name="hobbies" value="Photography" required> Photography &nbsp;&nbsp;
+                <input type="checkbox" name="hobbies" value="Dance" required> Dance &nbsp;&nbsp;
+                <input type="checkbox" name="hobbies" value="Signing" required > Signing &nbsp;&nbsp;
+                <input type="checkbox" name="hobbies" value="Coocking" required> Coocking 
+            </div>
+          </div>
+      </div>
+
+      <div class="row mt-2">
+          <div class="col" id="specialization">
+              <label for="specialization" class="form-label">specialization</label><br>
+
+              <div class="temp">
+
+                  <input type="text" class="form-control" name="subject_name" id="subject_name" placeholder="Subject Name">
+                  
+                  <div class="row topic ">
+                    <div class="row topic1 mt-2">
+                      <div class="col-2"> 
+                          <input type="text" class="form-control" name="topic_name" placeholder="Topic Name" required >
+                      </div>
+                      <div class="col-2">
+                          <input type="text" class="form-control" name="grades" placeholder="Grades" required >
+                      </div>
+                      <div class="col-2">
+                          <button type="button" id="delete_topic" class="btn btn-info">Delete topic</button>
+                      </div>
+                      </div>
+                  </div>
+                  <button type="button" id="add_topic" class="btn btn-info">add topic</button>
+
+
+
+                  <button type="button" id="delete_specializaion" class="btn btn-info">Delete specialization</button>
+
+              </div>
+                  
+          </div>
+      </div>
+
+
+      <div>
+        <button type="button" id="add_specializaion" class="btn btn-info"  >Add specialization</button>
+      </div>
+
+
+
+    <!-- submit button -->
+      <div class="d-grid gap-2 col-1 mt-3 mx-auto">
+          <button class="btn btn-info" onclick="save_student()" type="button">save</button>
+      </div>
+
+
+  </div> <!-- main-container end -->
+
+</form>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

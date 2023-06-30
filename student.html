@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .submitbtn{
+        cursor: alias;
+    }
+  </style>
+</head>
+  <body>
+    <div class="headline text-center text-bg-info" >
+        <h1>Students</h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-8">
+            <input class="form-control mt-2 ms-2" id="search" type="search" placeholder="Search Students by name " aria-label="Search">
+        </div>
+        <div class="col-4">
+            <button class="btn btn-info mt-2 submitbtn " onclick="Umesh()" type="submit">submit</button>
+            <button class="btn btn-info mt-2 "  type="submit"><a href="student_form.html">Add New</a></button>&nbsp;&nbsp;
+            <button class="btn btn-info mt-2 export"   >Export</button>
+        </div>
+    </div>
+
+    <div class="row mt-5 ms-5 me-5">
+        <div class="col">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Email </th>
+                    <th>Address</th>
+                    <th>Topics</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td ><p class="fname"></p><p class="lname"></p></td>
+                    <td ><p class="email"></p></td>
+                    <td ><p class="address"></p></td>
+                    <td ><p class="topic_name"></p></td>
+                    <td ><button class="btn btn-info mt-2 ">Edit </button> &nbsp; <button class="btn btn-info mt-2 ">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    
+
+    
+        
+      
+      <script src="script1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
