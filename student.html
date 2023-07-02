@@ -33,9 +33,9 @@
         </div>
     </div>
 
-    <div class="row mt-5 ms-5 me-5">
+    <div class="row mt-5 ">
         <div class="col">
-            <table class="table table-bordered">
+            <table class="table table-bordered " id="temp2">
                 <tr>
                     <th>Name</th>
                     <th>Email </th>
@@ -43,14 +43,46 @@
                     <th>Topics</th>
                     <th>Actions</th>
                 </tr>
-                <tr>
-                    <td ><p class="fname"></p><p class="lname"></p></td>
+                <tr >
+                     <td >
+                      <div class="row">
+                        <div class="col-3">
+                          <div id="box_div">
+                            <span class="start"></span>
+                          </div>
+                        </div>
+                        <div class="col-8 ps-5">
+                          <span class="fname"></span>&nbsp;<span class="lname"></span><br>
+                          <span class="contact"></span><br>
+                          <span class="specialization"></span>
+                        </div>
+                      </div>
+                      
+                      
+                    </td>
                     <td ><p class="email"></p></td>
-                    <td ><p class="address"></p></td>
+                    <td ><span class="address"></span><br>
+                        <span class="city"></span><span class="state"></span><span class="country"></span>
+                    </td>
                     <td ><p class="topic_name"></p></td>
-                    <td ><button class="btn btn-info mt-2 ">Edit </button> &nbsp; <button class="btn btn-info mt-2 ">Delete</button></td>
-                </tr>
+                    <td ><button class="btn btn-info mt-2  ">Edit </button> &nbsp; <button class="btn btn-info mt-2  delete" >Delete</button></td>
+                
+                  </tr> 
             </table>
+            <style>
+              .fname{
+                font-weight: 500;
+              }
+              .lname{
+                font-weight: 500;
+              }
+              
+
+             
+                
+            
+              
+            </style>
         </div>
     </div>
 

@@ -117,8 +117,8 @@ function save_student(){
     var obj = JSON.stringify(fulljson);
     console.log(obj);
     localStorage.setItem('data', obj);
-
     
+   
 
     if (window.confirm('Successfully registered ')) 
     {
